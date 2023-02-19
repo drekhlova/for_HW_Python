@@ -15,7 +15,7 @@ c = int(bilet[2])
 d = int(bilet[3])
 e = int(bilet[4])
 f = int(bilet[5])
-if (a+b+c) == (d+e+f):
+if a+b+c == d+e+f:
     print('YES')
 else:
     print('NO')
