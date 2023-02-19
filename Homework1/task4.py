@@ -9,7 +9,7 @@
 n = 3
 m = 2
 k = int(input('Какое количество долек отломить? '))
-if (k < n * m) and (k % 2 == 0) or (k % 3 == 0):
+if k < n * m and (k % 2 == 0 or k % 3 == 0):
     print('YES')
 else:
     print('NO')
