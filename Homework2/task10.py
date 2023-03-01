@@ -17,6 +17,7 @@
 ##else:
 ##    print(b)
 
+"""
 n = int(input('Введите количество монеток, лежащих на столе: '))
 count = 0
 i = 0
@@ -36,3 +37,12 @@ elif count == n - count:
     print(f'Одинаковое количество орлов и решек, по {count} штук. Можно переворачивать любые.')
 else:
     print(f'Минимальное количество {count}. Этих орлов надо перевернуть и будет {n} решек.')
+"""
+
+from random import randint
+coins = [randint(0 , 1) for _ in range(int(input()))]
+print(coins)
+print(min(
+    coins.count(0),
+    coins.count(1)
+))
