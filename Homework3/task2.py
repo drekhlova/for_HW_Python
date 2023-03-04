@@ -14,21 +14,37 @@
 
 import random 
 
-N = int(input('Введите количество элементов в массиве: '))
+#N = int(input('Введите количество элементов в массиве: '))
 
+#lst = [random.randrange(10) for _ in range(N)]
+#print(lst)
+
+#new_lst = list(map(int, lst))
+
+#X = int(input('Введите число Х: '))
+
+#count = 0
+#n = 0
+
+#for i in range(N):
+#    if (X - lst[i]) <= X - n and X - lst[i] >= 0:
+#    n = i
+#    count += 1
+
+#print(lst[n])
+
+N = int(input('Введите количество элементов в массиве: '))
 lst = [random.randrange(10) for _ in range(N)]
 print(lst)
 
-new_lst = list(map(int, lst))
-
 X = int(input('Введите число Х: '))
 
-count = 0
-n = 0
-
+n = abs(X - lst[0])  # abs() - модуль числа
+index = 0
 for i in range(N):
-    if (X - new_lst[i]) <= X - n and (X - new_lst[i]) >= 0:
-        n = i
-    count += 1
+    count = abs(X - lst[i])
+    if count < n:
+        n = count
+        index = i
 
-print(new_lst[n])
+print(lst[index])
