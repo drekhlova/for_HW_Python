@@ -18,12 +18,16 @@ N = int(input('Введите количество элементов в мас�
 lst = [random.randrange(10) for _ in range(N)]
 print(lst)
 
-new_lst = list(map(int, lst))
+#new_lst = list(map(int, lst))
 
 X = int(input('Введите число Х: '))
 
 count = 0
-for i in range(N):
-    if new_lst[i] == X:
+#for i in range(N):
+#    if new_lst[i] == X:
+#        count += 1
+
+for i in lst:
+    if i == X: 
         count += 1
 print(f'Число {X} встречается в массиве {count} раз.')

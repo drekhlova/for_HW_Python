@@ -27,33 +27,16 @@ Q, Z – 10 очков.
     12
 """
 
-eng_dct = {1:'AEIOULNSTR',
-      	2:'DG',
-      	3:'BCMP',
-      	4:'FHVWY',
-      	5:'K',
-      	8:'JZ',
-      	10:'QZ'}
+dct = {1:'AEIOULNSTRАВЕИНОРСТ',
+      	2:'DGДКЛМПУ',
+      	3:'BCMPБГЁЬЯ',
+      	4:'FHVWYЙЫ',
+      	5:'KЖЗХЦЧ',
+      	8:'JZШЭЮ',
+      	10:'QZФЩЪ'}
 
-rus_dct = {1:'АВЕИНОРСТ',
-      	2:'ДКЛМПУ',
-      	3:'БГЁЬЯ',
-      	4:'ЙЫ',
-      	5:'ЖЗХЦЧ',
-      	8:'ШЭЮ',
-      	10:'ФЩЪ'}
-
-hello = int(input('Введите 0, если играем в английской раскладке, или 1, если в русской: '))
 word = input('Введите слово: ').upper()
-
-if hello == 0:
-    print(f'За слово {word} вы получаете', sum([k for i in word for k, v in eng_dct.items() if i in v]), 'очков!')
-
-elif hello == 1:
-    print(f'За слово {word} вы получаете', sum([k for i in word for k, v in rus_dct.items() if i in v]), 'очков!')
-
-else:
-    print('Упс! Что-то пошло не так...')
+print(f'За слово {word} вы получаете', sum([k for i in word for k, v in dct.items() if i in v]), 'очков!')
 
 ##вариант, как задать множеству ключей 1 значение
 ##value_1 = 1

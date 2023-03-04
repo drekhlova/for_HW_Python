@@ -25,8 +25,10 @@ X = int(input('Введите число Х: '))
 
 count = 0
 n = 0
+
 for i in range(N):
-    if (X - new_lst[i]) < X - n and X - new_lst[i] > 0:
+    if (X - new_lst[i]) <= X - n and (X - new_lst[i]) >= 0:
         n = i
     count += 1
+
 print(new_lst[n])
