@@ -14,6 +14,9 @@ def degree(a, b):
 
     return a * degree(a, b - 1)
 
-number = degree(int(input('Введите число А: ')), int(input('Введите степень В: ')))
+#number = degree(int(input('Введите число А: ')), int(input('Введите степень В: ')))
+a = int(input('Введите число А: '))
+b = int(input('Введите степень В: '))
 
-print(f'Результат возведения числа А в степень В равен {number}')
+#print(f'Результат возведения числа А в степень В равен {number}')
+print(degree(a, b))

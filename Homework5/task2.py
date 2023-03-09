@@ -13,6 +13,6 @@ def sum(a, b):
         return a
     return sum(a + 1, b - 1)
 
-summ = sum(int(input('a:')), int(input('b:')))
+summ = sum(int(input('Введите первое число: ')), int(input('Введите второе число: ')))
 
 print(f'Сумма чисел равна {summ}.')
