@@ -13,11 +13,11 @@
 """
 
 
-alp = "аеёиоуыэюя"
-word_sug = input().split()
-vowel_letters = [sum([True for j in word if j.lower() in alp]) for word in word_sug]
-
-if all(vowel_letters) and len(set(vowel_letters)) == 1:
-    print("Парам пам-пам")
+vowel_letters = "аеёиоуыэюя"
+song = input('Продолжи мой мотив! Парам-пам-пам...').split()
+rhyme = [sum([True for i in word if i.lower() in vowel_letters])
+         for word in song]
+if all(rhyme) and len(set(rhyme)) == 1:
+    print('Парам пам-пам!')
 else:
-    print("Пам парам")
+    print('Пам парам!')
